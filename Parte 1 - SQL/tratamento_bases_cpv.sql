@@ -55,13 +55,27 @@ BEGIN
         AND i.ano = b_linx.ano 
         AND i.cod_un_negocio = b_linx.cod_un_negocio
     ),
+
+    aux_contagem_skus_combo AS (
+      SELECT 
+        cod_material_pai,
+        cod_un_negocio, 
+        COUNT(DISTINCT cod_material_filho) AS qtd_skus_combo
+      FROM tb_produto_sku_combo
+      GROUP BY 1,2
+    ),
+
     base_cpv_combos AS (
       SELECT
         cpvs.ano,
         combo.cod_material_pai AS cod_material,
-        combo.cod_un_negocio,        
+        combo.cod_un_negocio,
+        IF(COUNT(DISTINCT cpvs.cod_material) != MAX(contagem.qtd_skus_combo), 1, 0) AS flg_combo_incompleto,        
         SUM(cpvs.cpv) AS cpv
       FROM tb_produto_sku_combo AS combo
+      INNER JOIN aux_contagem_skus_combo contagem
+        ON combo.cod_material_pai = contagem.cod_material_pai
+        AND combo.cod_un_negocio = contagem.cod_un_negocio
       INNER JOIN base_cpvs_consolidados AS cpvs
         ON combo.cod_un_negocio = cpvs.cod_un_negocio 
         AND combo.cod_material_filho = cpvs.cod_material
@@ -71,7 +85,8 @@ BEGIN
       cpvs.ano,
       cpvs.cod_un_negocio,
       cpvs.cod_material,
-      IF(skus.flg_combo IS TRUE, combo.cpv, cpvs.cpv) AS cpv
+      IF(skus.flg_combo IS TRUE, combo.cpv, cpvs.cpv) AS cpv,
+      IFNULL(combo.flg_combo_incompleto, 0) AS flg_combo_incompleto
     FROM base_cpvs_consolidados AS cpvs
     INNER JOIN tb_produto_skus AS skus
       ON cpvs.cod_un_negocio = skus.cod_un_negocio 
