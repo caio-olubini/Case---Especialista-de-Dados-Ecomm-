@@ -55,7 +55,6 @@ BEGIN
         AND i.ano = b_linx.ano 
         AND i.cod_un_negocio = b_linx.cod_un_negocio
     ),
-
     aux_contagem_skus_combo AS (
       SELECT 
         cod_material_pai,
@@ -64,7 +63,6 @@ BEGIN
       FROM tb_produto_sku_combo
       GROUP BY 1,2
     ),
-
     base_cpv_combos AS (
       SELECT
         cpvs.ano,
