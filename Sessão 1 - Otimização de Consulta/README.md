@@ -1,4 +1,3 @@
-````markdown
 # Changelog de Otimização: tb_estoque_analise_quebra_omni
 
 Este documento descreve as melhorias implementadas na query de criação da tabela `tb_estoque_analise_quebra_omni`, focando nos ganhos de **performance**, **organização** e **legibilidade** do código.
