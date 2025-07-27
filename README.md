@@ -2,7 +2,7 @@
 
 ## 🎯 Objetivo
 
-Este repositório centraliza as resoluções desenvolvidas para o case técnico do processo seletivo de **Especialista de Dados I**. O projeto aborda desafios práticos da área de Ecommerce do Grupo Boticário, demonstrando habilidades em engenharia, otimização e análise de dados para aprimorar a experiência do consumidor e impulsionar resultados.
+Este repositório centraliza as resoluções desenvolvidas para o case técnico do processo seletivo de **Especialista de Dados I**.
 
 ---
 
