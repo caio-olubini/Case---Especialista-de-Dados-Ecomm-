@@ -1,7 +1,3 @@
-Claro, aqui está uma proposta de arquivo `README.md` para a sua tabela, incluindo a explicação do código, o diagrama de relacionamento e sugestões de validações para monitoramento.
-
------
-
 # Tabela `cpv_normalizado`
 
 Este documento detalha a estrutura e o propósito da tabela `projeto.dataset.cpv_normalizado`, gerada pela procedure `proc_cpv_normalizado`. O objetivo principal é consolidar e tratar os dados de Custo de Produto Vendido (CPV) de múltiplas fontes, criando uma base de dados unificada e confiável para análises.
