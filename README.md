@@ -1,7 +1,5 @@
 # Case Técnico: Especialista de Dados I - Grupo Boticário
 
-![Grupo Boticário](https://logodownload.org/wp-content/uploads/2021/09/grupo-boticario-logo-1.png)
-
 ## 🎯 Objetivo
 
 Este repositório centraliza as resoluções desenvolvidas para o case técnico do processo seletivo de **Especialista de Dados I**. O projeto aborda desafios práticos da área de Ecommerce do Grupo Boticário, demonstrando habilidades em engenharia, otimização e análise de dados para aprimorar a experiência do consumidor e impulsionar resultados.
