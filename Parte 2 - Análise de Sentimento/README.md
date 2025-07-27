@@ -33,13 +33,11 @@ O projeto está organizado de forma clara e sequencial dentro de um único noteb
 4.  **Pré-processamento e Engenharia de Recursos:** Etapa de limpeza e preparação dos textos para a modelagem.
 5.  **Modelagem:** Construção e treinamento do modelo de análise de sentimentos.
 6.  **Análise de Sentimento:** Aplicação do modelo treinado para classificar as reviews.
-7.  **Insights & Análise de Sentimentos:** Extração de conclusões e visualização dos resultados obtidos.
+7.  **Insights:** Extração de conclusões dos resultados obtidos.
 
 ---
 
 ## 🚀 Próximos Passos (Evoluções)
-
-Para garantir a contínua relevância e precisão do modelo, as seguintes evoluções estão planejadas:
 
 -   **Implementação de Avaliação de Classificação:**
     -   Desenvolvimento de um processo de verificação manual da acurácia do modelo. A ideia é extrair amostras estratificadas periodicamente para que a performance seja auditada e o modelo, mantido e recalibrado conforme necessário.
