@@ -64,7 +64,7 @@ CREATE OR REPLACE TABLE tb_estoque_analise_quebra_omni AS (
       ON ped.cod_pedido_item = est.cod_material
       AND SAFE_CAST(ped.cod_location AS INT) = SAFE_CAST(est.cod_franquia AS INT)
     WHERE 1 = 1
-      AND CAST(dt_carga_estoque AS DATE) BETWEEN dt_inicio AND dt_fim
+      AND DATE(dt_carga_estoque) BETWEEN dt_inicio AND dt_fim
     GROUP BY ALL
 
   ),
